@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -9,6 +9,13 @@
 :root {
   font-size: 62.5%;
 
+  --menu-color: hsla(0, 0%, 12%, 0.932);
+
+  --primary-color: hsl(355, 75%, 48%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(150, 4%, 69%);
+  --button-color: hsl(355, 77%, 44%);
+
   --nav-height: 7.2rem;
 }
 html,
@@ -18,8 +25,8 @@ body {
 }
 
 body {
-  background: rgba(197, 197, 197, 0.623);
-  font-family: 'Special Elite';
+  background: url(../image/Indieground_PhotocopyNoise_Textures_05.jpg);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -38,7 +45,7 @@ section h4 {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 150%;
-  color: black;
+  color: var(--primary-color);
   margin-bottom: 1.6rem;
 
   letter-spacing: 0.08rem;
@@ -49,22 +56,31 @@ section h1 {
   font-size: 3.4rem;
   font-weight: 700;
   line-height: 130%;
-  color: black;
+  color: var(--title-color);
+  font-weight: bold;
 
   margin-bottom: 2.4rem;
 }
 
 section h2 {
+  font-weight: 600;
   font-size: 3rem;
   line-height: 3.9rem;
-  color: black;
+  color: var(--primary-color);
+}
+
+section h3 {
+  font-weight: 500;
+  font-size: rem;
+  line-height: 150%;
+  color: var(--primary-color);
 }
 
 section .content p {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 150%;
-  color: black;
+  color: var(--text-color);
 }
 
 .btn {
@@ -84,7 +100,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  padding-top: 1rem;
+  padding: 1.1rem 1rem 1rem 0rem;
   z-index: 100;
 }
 
@@ -94,13 +110,100 @@ nav .wrapper {
   justify-content: space-between;
 }
 
+nav.scroll {
+  background: var(--menu-color);
+}
+
 nav button {
   background: none;
   border: none;
 }
 
 nav button path {
-  stroke: #6f00ff;
+  stroke: var(--primary-color);
+}
+nav.scroll button path {
+  stroke: var(--primary-color);
+}
+
+nav .logo {
+  color: var(--title-color);
+}
+
+nav.scroll .logo {
+  color: (--primary-color);
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+/* =======================MENU====================================*/
+
+.menu {
+  transform: translateY(900%);
+}
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded {
+  overflow: hidden; /* some com a barra de rolagem*/
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+
+body.menu-expanded nav {
+  top: 0;
+  padding: 0;
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background: url(../image/Indieground_PhotocopyNoise_Textures_03.jpg);
+
+  width: 100vw;
+  height: 120vh;
+
+  padding-top: var(--nav-height);
+
+  transition: transform 300ms 100ms;
+
+  transform: translateY(-7%);
+}
+.menu ul:nth-child(1) /* Pega o elemento da ordem que corresponde ao indice passado*/ {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul li a {
+  color: var(--title-color);
+  text-decoration: none;
+}
+body.menu-expanded .logo,
+body.menu-expanded .close-menu {
+  position: relative;
+  z-index: 100;
 }
 
 /* =======================HOME====================================*/
@@ -113,9 +216,11 @@ nav button path {
 #home .wrapper {
   text-align: left;
 }
-
+#home h3 {
+  font-weight: bold;
+}
 #home .content p {
-  width: 35rem;
+  width: 36rem;
   padding-bottom: 1rem;
 }
 
@@ -124,6 +229,8 @@ nav button path {
 }
 
 #home .content a {
+  background: var(--button-color);
+  color: var(--title-color);
   border: 1px solid red;
   padding: 1rem;
 }
@@ -136,8 +243,41 @@ nav button path {
 #home img {
   display: block;
   margin-inline: auto;
-  width: 26.4rem;
-  height: 34.2rem;
+  width: 35rem;
+  height: 50rem;
 
   padding-top: 4rem;
+}
+
+/* =======================ABOUT====================================*/
+#about {
+  padding-block: 0;
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#about img {
+  display: block;
+  margin-inline: auto;
+  width: 35rem;
+  height: 50rem;
+
+  padding-top: 4rem;
+}
+
+#about h1 {
+  padding-top: 2rem;
+  text-align: left;
+}
+
+#about .content {
+  text-align: left;
+}
+
+#about .content p {
+  font-weight: 500;
+}
+
+#about .content ul {
+  list-style-type: none;
+  padding-top: 1.5rem;
 }
