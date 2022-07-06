@@ -15,7 +15,8 @@
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(150, 4%, 69%);
   --button-color: hsl(355, 77%, 44%);
-
+  --purple: hsl(268, 80%, 75%);
+  --background-card: hsl(0, 0%, 13%);
   --nav-height: 7.2rem;
 }
 html,
@@ -255,29 +256,230 @@ body.menu-expanded .close-menu {
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
-#about img {
-  display: block;
-  margin-inline: auto;
-  width: 35rem;
-  height: 50rem;
+#about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 2.4rem;
+}
 
-  padding-top: 4rem;
+#about .image {
+  width: 32rem;
+  text-align: center;
+}
+
+#about img {
+  width: 100%;
+  border: 1rem solid rgba(214, 0, 0, 0.521);
 }
 
 #about h1 {
   padding-top: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 #about .content {
-  text-align: left;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 55rem;
+  flex: 1 1 55rem;
 }
 
-#about .content p {
+#about .content h2 {
+  font-size: 3rem;
+  color: var(--title-color);
+  padding-bottom: 1rem;
+}
+
+#about .content > p {
   font-weight: 500;
+  color: var(--text-color);
+  line-height: 1.6rem;
+  padding-bottom: 1rem;
 }
 
-#about .content ul {
+#about .content .info ul {
   list-style-type: none;
-  padding-top: 1.5rem;
+}
+
+#about .content .about-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#about .content .about-info .info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 15rem;
+  flex: 1 1 15rem;
+}
+
+#about .content .about-info .info h4 {
+  font-size: 1.6rem;
+  color: var(--title-color);
+  padding-bottom: 1rem;
+}
+
+#about .content .about-info .info span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.counting {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 35rem;
+  flex: 1 1 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.counting .box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 18rem;
+  flex: 1 1 18rem;
+  text-align: center;
+  background-color: var(--background-card);
+  padding: 2rem;
+}
+
+.counting .box .count {
+  font-size: 3.5rem;
+  color: var(--purple);
+}
+
+.counting .box h3 {
+  font-size: 1.8rem;
+  color: var(--title-color);
+}
+
+.skill-container {
+  padding: 2rem 0;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 30rem;
+  flex: 1 1 30rem;
+  margin-right: 1.5rem;
+}
+
+.skill-item .box {
+  padding: 1rem 0;
+}
+
+.skill-item .box h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  color: var(--title-color);
+  font-weight: 400;
+}
+
+.skill-item .box .progress-bar {
+  width: 100%;
+  background: var(--background-card);
+  overflow: hidden;
+  height: 1rem;
+  border-radius: 50rem;
+}
+
+.skill-item .box .progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--purple);
+}
+.skill-item .box:nth-child(1) .progress-bar span {
+  width: 50%;
+}
+
+.skill-item .box:nth-child(2) .progress-bar span {
+  width: 45%;
+}
+
+.skill-item .box:nth-child(3) .progress-bar span {
+  width: 40%;
+}
+
+/* =======================QUALIFICATION====================================*/
+
+#qualification .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.box-container .education {
+  flex: 1 1 40rem;
+}
+
+.historico {
+  position: relative;
+  flex: 1 1 40rem;
+  padding: 0 3rem 2rem 3rem;
+  border-left: 0.2rem solid var(--purple);
+  margin-left: 2rem;
+}
+
+.historico .content {
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  border-left: 2rem;
+}
+
+.historico span {
+  background: var(--background-card);
+  color: var(--title-color);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.8rem;
+  border-radius: 50rem;
+}
+
+.historico h3 {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+  color: var(--title-color);
+}
+
+.historico p {
+  line-height: 2.5rem;
 }

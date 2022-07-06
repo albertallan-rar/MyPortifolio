@@ -25,7 +25,7 @@
         <div class="menu">
           <ul>
             <li><a onclick="exitmenuexpansion()" href="#">Inicio</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Sobre</a></li>
+            <li><a onclick="exitmenuexpansion()" href="#about">Sobre</a></li>
             <li><a onclick="exitmenuexpansion()" href="#">Serviços</a></li>
             <li><a onclick="exitmenuexpansion()" href="#">Portfolio</a></li>
             <li><a onclick="exitmenuexpansion()" href="#">Depoimentos</a></li>
@@ -125,20 +125,97 @@
 
     <section id="about">
       <div class="wrapper">
-        <img src="./image/foto-about-me.jpg" />
-        <h1>Meu nome é Albert</h1>
+        <div class="image">
+          <img src="./image/foto-about-me.jpg" />
+        </div>
+
         <div class="content">
+          <h2>Meu nome é Albert</h2>
           <p>
             Eu me chamo Albert e nesse portfolio irei apresentar um pouco sobre
             a minha pessoa e um pouco dos meus feitos como programador Web.
           </p>
+          <div class="about-info">
+            <div class="info">
+              <ul>
+                <li>
+                  <h4>Idade:<span>24</span></h4>
+                </li>
+                <li>
+                  <h4>Genero:<span>Masculino</span></h4>
+                </li>
+                <li>
+                  <h4>Idioma:<span>Portugues</span></h4>
+                </li>
+                <li>
+                  <h4>Trabalho:<span>Front-End Developer</span></h4>
+                </li>
+              </ul>
+            </div>
+            <div class="counting">
+              <div class="box">
+                <h1 class="count" data-count="4">1</h1>
+                <h3>Projeto Finalizado</h3>
+              </div>
+              <div class="box">
+                <h1 class="count" data-count="100">4+</h1>
+                <h3>anos de</h3>
+              </div>
+              <div class="box">
+                <h1 class="count" data-count="80">4+</h1>
+                <h3>anos de experiencia</h3>
+              </div>
+              <div class="box">
+                <h1 class="count" data-count="20">4+</h1>
+                <h3>anos de experiencia</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <ul>
-            <li><p>Idade:24</p></li>
-            <li><p>Genero:Masculino</p></li>
-            <li><p>Idioma:Portugues</p></li>
-            <li><p>Trabalho:Front-End Developer</p></li>
-          </ul>
+    <section id="skill-container">
+      <div class="wrapper">
+        <div class="heading">
+          <h2>Minhas <scpan>Habilidades</scpan></h2>
+        </div>
+
+        <div class="skills">
+          <div class="skill-item">
+            <div class="box">
+              <h3>HTML5<span>50%</span></h3>
+              <div class="progress-bar"><span></span></div>
+            </div>
+            <div class="box">
+              <h3>CSS<span>45%</span></h3>
+              <div class="progress-bar"><span></span></div>
+            </div>
+            <div class="box">
+              <h3>JavaScript<span>40%</span></h3>
+              <div class="progress-bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="qualification">
+      <div class="wrapper">
+        <header>
+          <h2>Minhas <span>Qualificações</span></h2>
+        </header>
+
+        <div class="box-container">
+          <div class="education">
+            <div class="historico">
+              <div class="content">
+                <span>2017 - 2021</span>
+                <h3>Cientista da Computação</h3>
+                <p>dwdw</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
