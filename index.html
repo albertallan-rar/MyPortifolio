@@ -26,11 +26,13 @@
           <ul>
             <li><a onclick="exitmenuexpansion()" href="#">Inicio</a></li>
             <li><a onclick="exitmenuexpansion()" href="#about">Sobre</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Serviços</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Portfolio</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Depoimentos</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Blogs</a></li>
-            <li><a onclick="exitmenuexpansion()" href="#">Contato</a></li>
+            <li><a onclick="exitmenuexpansion()" href="#skill">Skills</a></li>
+            <li>
+              <a onclick="exitmenuexpansion()" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a onclick="exitmenuexpansion()" href="#contact">Contato</a>
+            </li>
           </ul>
         </div>
         <button class="open-menu" onclick="menuexpansion()">
@@ -100,7 +102,7 @@
             Sou um Cientista da Computação recem formado e pretendo ser um
             desenvolvedor de front-end pela parte do front-end.
           </p>
-          <a href="#" class="btn"
+          <a href="#about" class="btn"
             >Sobre Mim
             <svg
               width="24"
@@ -154,20 +156,20 @@
             </div>
             <div class="counting">
               <div class="box">
-                <h1 class="count" data-count="4">1</h1>
+                <h1 class="count" data-count="1">1</h1>
                 <h3>Projeto Finalizado</h3>
               </div>
               <div class="box">
-                <h1 class="count" data-count="100">4+</h1>
-                <h3>anos de</h3>
+                <h1 class="count" data-count="100">1</h1>
+                <h3>Curso de Python</h3>
               </div>
               <div class="box">
-                <h1 class="count" data-count="80">4+</h1>
-                <h3>anos de experiencia</h3>
+                <h1 class="count" data-count="80">1</h1>
+                <h3>Curso de Tkinter</h3>
               </div>
               <div class="box">
-                <h1 class="count" data-count="20">4+</h1>
-                <h3>anos de experiencia</h3>
+                <h1 class="count" data-count="20">1</h1>
+                <h3>Curso de JavaScript</h3>
               </div>
             </div>
           </div>
@@ -175,7 +177,7 @@
       </div>
     </section>
 
-    <section id="skill-container">
+    <section id="skill">
       <div class="wrapper">
         <div class="heading">
           <h2>Minhas <scpan>Habilidades</scpan></h2>
@@ -210,15 +212,125 @@
           <div class="education">
             <div class="historico">
               <div class="content">
+                <span>2013 - 2014</span>
+                <h3>Tecnico de Informatica</h3>
+                <p>Pronatec</p>
+              </div>
+              <div class="content">
                 <span>2017 - 2021</span>
                 <h3>Cientista da Computação</h3>
-                <p>dwdw</p>
+                <p>Faculdade do Vale do Rio Verde</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="portfolio">
+      <div class="wrapper">
+        <div class="heading">
+          <h2>Meu <span>Portfolio</span></h2>
+        </div>
+        <div class="box-container">
+          <div class="portfolio-item image web">
+            <img src="./image/tela-portfolio-projeto1.png" />
+            <div class="content">
+              <h4>Web Development</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="heading">
+          <h2>Meus <span>Contatos</span></h2>
+        </div>
+        <div class="box-container">
+          <div class="contact-info">
+            <h3>Entrar em contato</h3>
+            <p>Gostou das coisas no meu portfolio, abaixo tem meus contatos</p>
+
+            <div class="info-item">
+              <h4>Phone:</h4>
+              <div class="detail">
+                <p>+123-456-789</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <h4>Email:</h4>
+              <div class="detail">
+                <p class="gmail">albertallanramos@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <h4>Linkedin:</h4>
+              <div class="detail">
+                <p class="linkedin">
+                  https://www.linkedin.com/in/albert-allan-ramos-88b9611a7/
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <h4>Github:</h4>
+              <div class="detail">
+                <p class="github">https://github.com/albertallan-rar</p>
+              </div>
+            </div>
+          </div>
+          <form method="post" class="contact-form" id="contactUs-Form">
+            <input
+              type="text"
+              name="name"
+              class="box"
+              id="name"
+              placeholder="Nome"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              class="box"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              class="box"
+              id="subject"
+              placeholder="Titulo"
+              required
+            />
+            <textarea
+              cols="30"
+              rows="10"
+              name="comment"
+              id="comment"
+              class="box"
+              placeholder="Messagem"
+            ></textarea>
+            <button type="submit" class="btn" name="submit" id="submit">
+              Mande uma mensagem
+            </button>
+
+            <span class="alert" id="msg"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="content">
+        <p>
+          Criado por <span>Albert Allan Ramos</span><br />
+          Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
