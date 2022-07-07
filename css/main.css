@@ -220,6 +220,10 @@ body.menu-expanded .close-menu {
 #home h3 {
   font-weight: bold;
 }
+
+#home h1 {
+  font-size: 3rem;
+}
 #home .content p {
   width: 36rem;
   padding-bottom: 1rem;
@@ -239,15 +243,6 @@ body.menu-expanded .close-menu {
 #home .content a img {
   width: 1rem;
   padding-left: 1rem;
-}
-
-#home img {
-  display: block;
-  margin-inline: auto;
-  width: 35rem;
-  height: 50rem;
-
-  padding-top: 4rem;
 }
 
 /* =======================ABOUT====================================*/
@@ -290,17 +285,12 @@ body.menu-expanded .close-menu {
   flex: 1 1 55rem;
 }
 
-#about .content h2 {
-  font-size: 3rem;
-  color: var(--title-color);
-  padding-bottom: 1rem;
-}
-
 #about .content > p {
   font-weight: 500;
   color: var(--text-color);
   line-height: 1.6rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
+  text-align: left;
 }
 
 #about .content .info ul {
@@ -322,24 +312,6 @@ body.menu-expanded .close-menu {
   gap: 1rem;
 }
 
-#about .content .about-info .info {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 15rem;
-  flex: 1 1 15rem;
-}
-
-#about .content .about-info .info h4 {
-  font-size: 1.6rem;
-  color: var(--title-color);
-  padding-bottom: 1rem;
-}
-
-#about .content .about-info .info span {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--text-color);
-}
-
 #about .counting {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 35rem;
@@ -359,22 +331,67 @@ body.menu-expanded .close-menu {
 }
 
 #about .counting .box {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 18rem;
   flex: 1 1 18rem;
   text-align: center;
   background-color: var(--background-card);
   padding: 2rem;
+  width: 100%;
 }
 
 #about .counting .box .count {
   font-size: 3.5rem;
-  color: var(--purple);
+  color: var(--primary-color);
 }
 
 #about .counting .box h3 {
   font-size: 1.8rem;
   color: var(--title-color);
+}
+
+/* =======================QUALIFICATION====================================*/
+
+#qualification .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+#qualification .box-container .education {
+  flex: 1 1 40rem;
+}
+
+#qualification .historico {
+  position: relative;
+  flex: 1 1 40rem;
+  padding: 0 3rem 2rem 3rem;
+  border-left: 0.2rem solid var(--purple);
+  margin-left: 2rem;
+}
+
+#qualification .historico .content {
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  border-left: 2rem;
+}
+
+#qualification .historico span {
+  background: var(--background-card);
+  color: var(--title-color);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.8rem;
+  border-radius: 50rem;
+}
+
+#qualification .historico h3 {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+  color: var(--title-color);
+}
+
+#qualification .historico p {
+  line-height: 2.5rem;
 }
 
 /* =======================SKILL====================================*/
@@ -438,52 +455,6 @@ body.menu-expanded .close-menu {
 
 #skill .skill-item .box:nth-child(3) .progress-bar span {
   width: 40%;
-}
-
-/* =======================QUALIFICATION====================================*/
-
-#qualification .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-#qualification .box-container .education {
-  flex: 1 1 40rem;
-}
-
-#qualification .historico {
-  position: relative;
-  flex: 1 1 40rem;
-  padding: 0 3rem 2rem 3rem;
-  border-left: 0.2rem solid var(--purple);
-  margin-left: 2rem;
-}
-
-#qualification .historico .content {
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  border-left: 2rem;
-}
-
-#qualification .historico span {
-  background: var(--background-card);
-  color: var(--title-color);
-  padding: 0.5rem 1.5rem;
-  font-size: 1.8rem;
-  border-radius: 50rem;
-}
-
-#qualification .historico h3 {
-  font-size: 2.5rem;
-  padding: 2rem 0;
-  color: var(--title-color);
-}
-
-#qualification .historico p {
-  line-height: 2.5rem;
 }
 
 /* =======================PORTFOLIO====================================*/
